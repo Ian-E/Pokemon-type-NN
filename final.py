@@ -64,34 +64,7 @@ if __name__ == "__main__":
 
     un = f(thing)
     un = list(un)
-    '''
-# 64 channels, filter window is 5x5, strides are 1x1.
-# Input shape is the size of the image.
-    model.add(Conv2D(32, kernel_size=(5, 5), strides=(1, 1),activation='relu',input_shape=input_shape))
- 
-    model.add(Activation('relu'))
-    model.add(Conv2D(32, (3, 3)))
-    model.add(Activation('relu'))
-    model.add(MaxPooling2D(pool_size=(2, 2)))
-    model.add(Dropout(0.25))
-
-    model.add(Conv2D(64, (3, 3), padding='same'))
-    model.add(Activation('relu'))
-    model.add(Conv2D(64, (3, 3)))
-    model.add(Activation('relu'))
-    model.add(MaxPooling2D(pool_size=(2, 2)))
-    model.add(Dropout(0.25))
-
-
-    model.add(Flatten())
-    model.add(Dense(512))
-    model.add(Activation('relu'))
-    model.add(Dropout(0.5))
-
-
-    #model.add(Dense(80, activation='relu'))
-    model.add(Dense(num_classes, activation='sigmoid'))
-    '''
+    #Create model here, using 3 dense layers and dropouts between them
     model.add(Dense(512, activation='relu', input_shape=(9, )))
     model.add(Dropout(0.2))
     model.add(Dense(512, activation='relu'))
