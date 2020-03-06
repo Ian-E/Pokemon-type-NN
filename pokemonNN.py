@@ -1,6 +1,6 @@
 '''
 POKEMON NEURAL NET
-Program reads in pictures, preprocesses them and runs them on a mlp or CNN. Also processes pictures through pca if u want
+Program reads in pictures, preprocesses them and runs them on a mlp or CNN. Also processes pictures through pca if you want
 '''
 import keras
 from keras import backend as K
@@ -11,7 +11,7 @@ from keras.utils import *
 import numpy as np
 from sklearn.decomposition import PCA
 from numpy import genfromtxt
-# Import `train_test_split` from `sklearn.model_selection`
+
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import confusion_matrix, precision_score, recall_score, f1_score, cohen_kappa_score
 from sklearn.preprocessing import *
@@ -113,11 +113,9 @@ if __name__ == "__main__":
     for i in name:
         if '0' in i:
             im = im + 1
-#            print(i)
             imgList.append(cv2.imread(i))
             imgList[im-1] = cv2.cvtColor(imgList[im-1], cv2.COLOR_BGR2LAB)
-            #imgList[im-1] = cv2.resize(imgList[im-1], (107, 107))
-#    imgList[imgList == 255] = 0
+         
     #reads in types csv's
     thing = []
     with open('pokemans.csv') as csvfile:
